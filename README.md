@@ -1,6 +1,6 @@
 Sliding Window
 ==============
-This code allows for analysis of statis time series to be run as a sliding window.
+This code allows for analysis of static time series to be run as a sliding window.
 
 Usage:
 ------
