@@ -1,6 +1,6 @@
 Sliding Window
 ==============
-This code allows for analysis of static time series to be run as a sliding window.
+This code provides a robust window function for sliding window correlation analysis of time series for evaluating dynamic functional connectivity alongside an extensible framework for general sliding window analysis.
 
 Usage:
 ------
