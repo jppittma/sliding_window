@@ -10,7 +10,7 @@ classdef Rect<sliding_window.Window
 
 		function ret=length(obj);
 			if isempty(obj.len)
-				obj.len = 1 / (obj.OMEGA_C * obj.TR);
+				obj.len = 1 / (Window.OMEGA_C * Window.TR);
 			end
 			ret = obj.len;
 		end
