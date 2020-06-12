@@ -8,7 +8,7 @@ classdef Rect<sliding_window.Window
 
 	methods
 
-		function ret=length(obj);
+		function ret=length(obj)
 			if isempty(obj.len)
 				obj.len = 1 / (Window.OMEGA_C * Window.TR);
 			end
