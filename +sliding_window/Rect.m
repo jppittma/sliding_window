@@ -10,7 +10,7 @@ classdef Rect<sliding_window.Window
 
 		function ret=length(obj)
 			if isempty(obj.len)
-				obj.len = 1 / (Window.OMEGA_C * Window.TR);
+				obj.len = 1 / (obj.OMEGA_C * obj.TR);
 			end
 			ret = obj.len;
 		end
@@ -22,7 +22,7 @@ classdef Rect<sliding_window.Window
 			window_start = window_num - obj.length();
 			window_end = window_num + obj.length();
 			mid_point = ceil( length(time_series) / 2);
-			window_index = [window_start:window_end] + mid_point;
+			window_index = [window_start:window_end] + mid_point + 1;
 			window = time_series(:,window_index);
 		end
 
