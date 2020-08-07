@@ -10,7 +10,7 @@ classdef Mrect < sliding_window.Window
 
 		function ret=length(obj)
 			if isempty(obj.len)
-				obj.len = 2 / (Window.OMEGA_C * Window.TR);
+				obj.len = 2 / (obj.OMEGA_C * obj.TR);
 			end
 			ret = obj.len;
 		end
