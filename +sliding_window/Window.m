@@ -3,7 +3,7 @@ classdef (Abstract) Window
 	%Window number zero should represent the center of the time series, and
 	%the length of the window should represent the distance from the center of the 
 	%window to either edge.
-	properties (Static = true)
+	properties
 		%WFUBMC mri machines have a TR of 2 seconds
 		TR=2;
 		%This was given by Mokhtari as the minimum frequency for brain activity
