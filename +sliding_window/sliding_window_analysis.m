@@ -16,7 +16,7 @@ function output=sliding_window_analysis (time_series, window, step_size, analysi
 	%If the length of the time series is not a multiple of the step size, we'll cut time points off at the end.
 	base_num_windows = length(time_series) - window_size;
 	num_windows = floor( base_num_windows / step_size ) + 1;
-	first_window_index = -floor(length(time_series) / 2 - length(window));
+	first_window_index = -ceil(num_windows / 2 - 1);
 	first_window = analysis(window.single_window(time_series, first_window_index));
 	output = zeros( [size(first_window) num_windows] );
 	output(:,:,1) = first_window;
