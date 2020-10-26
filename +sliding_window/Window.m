@@ -1,4 +1,4 @@
-classdef (Abstract) Window
+classdef (Abstract) Window <handle
 	%Interface for implementing new windows for sliding window analysis.
 	%Window number zero should represent the center of the time series, and
 	%the length of the window should represent the distance from the center of the 
@@ -13,6 +13,21 @@ classdef (Abstract) Window
 		%In this instance length represents the distance from the center of the series
 		%to either edge.
 		length(obj)
-		single_window(obj, time_series, window_number)
-	end
+        get_half_width(obj)
+        index_from_beginning(obj,time_series)
+        index_from_center(obj,time_series)
+    end
+    
+    methods
+    
+        function obj=set_length(obj,input)
+            input = int32(input);
+            obj.half_width = idivide(input,2);
+        end
+        
+        function obj=set_half_width(obj,input)
+            obj.half_width = input;
+        end
+        
+    end
 end
